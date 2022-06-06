@@ -1,0 +1,144 @@
+@import "../../../default_styles/common.scss";
+
+$user_icon_image: url("../../../image/login.jpg");
+
+.sign-up-background {
+  position: relative;
+
+  height: 100vh;
+
+  background: linear-gradient(135deg, $common-gray 0%, $common-red 100%);
+
+  .sign-up-container {
+    // Position
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    $unit-size: 1vw;
+
+    width: calc(70 * $unit-size);
+    height: calc(40 * $unit-size);
+    border-radius: calc(2 * $unit-size);
+
+    // Background
+    background-color: white;
+    background-image: $user_icon_image;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .sign-up-content {
+      // Size
+      width: calc(70 / 3 * $unit-size);
+      height: calc(100% - 4 * $unit-size);
+
+      // ALign
+      margin-top: calc(2 * $unit-size);
+      margin-bottom: calc(2 * $unit-size);
+      margin-right: calc(2 * $unit-size);
+      margin-left: auto;
+
+      .text-guide {
+        // ALign
+        margin: calc(4 * $unit-size) 0 calc(2 * $unit-size) 0;
+        text-align: center;
+
+        // Font
+        font-weight: 600;
+        font-size: calc(1.5 * $unit-size);
+      }
+
+      .form-group {
+        // ALign
+        margin: $unit-size 0;
+
+        // Size
+        width: 100%;
+
+        .custom-input-password {
+          // Position
+          position: relative;
+
+          .icon-show-password {
+            //Position
+            position: absolute;
+
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, -50%);
+
+            cursor: pointer;
+          }
+        }
+      }
+
+      .form-select {
+        // ALign
+        margin: $unit-size 0;
+
+        // Size
+        width: 100%;
+      }
+
+      .date-picker-dob {
+        margin: $unit-size 0;
+
+        width: 100%;
+
+        .date-picker-dob-input {
+          padding-left: 10px;
+          text-align: left;
+
+          border-radius: 5px;
+
+          border: 1px solid lighten(gray, 30%);
+
+          height: 33px;
+          width: 50%;
+        }
+      }
+
+      .sign-up-error-message {
+        color: red;
+      }
+
+      .sign-up-button {
+        // ALign
+        margin: $unit-size 10% $unit-size 10%;
+
+        // Size
+        width: 80%;
+        border-radius: $unit-size;
+
+        background: linear-gradient(135deg, $common-red 0%, $common-gray 100%);
+
+        color: white;
+
+        border-color: #58384f;
+      }
+
+      .sign-up-button:hover {
+        background: linear-gradient(
+          135deg,
+          $common-orange 0%,
+          $common-lavender 100%
+        );
+      }
+
+      .forgot-password {
+        // ALign
+        margin: $unit-size;
+        text-align: right;
+        .forgot-password-button {
+          // Font
+          font-size: $unit-size;
+
+          text-decoration: none;
+
+          color: black;
+        }
+      }
+    }
+  }
+}

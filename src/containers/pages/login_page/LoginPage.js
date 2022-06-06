@@ -113,10 +113,17 @@ class LoginPage extends React.Component {
             <button className="login-button" onClick={() => this.handleLogin()}>
               Login
             </button>
-            <div className="forgot-password">
-              <Link className="forgot-password-button" to="#">
-                Forgot password
-              </Link>
+            <div className="other-login-option">
+              <div className="other-option-container">
+                <Link className="other-option-button" to="/signup">
+                  Sign Up
+                </Link>
+              </div>
+              <div className="other-option-container">
+                <Link className="other-option-button" to="#">
+                  Forgot password
+                </Link>
+              </div>
             </div>
           </div>
         </div>

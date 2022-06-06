@@ -13,6 +13,7 @@ import {
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import LoginPage from "./pages/login_page/LoginPage";
+import SignUpPage from "./pages/sign_up_page/SignUpPage";
 import StartPage from "./pages/start_page/StartPage";
 import HomePage from "./pages/home_page/HomePage";
 import ProfilePage from "./pages/profile_page/ProfilePage";
@@ -52,6 +53,10 @@ class App extends React.Component {
               <Route
                 path={path.LOGIN_PAGE}
                 component={userIsNotAuthenticated(LoginPage)}
+              />
+              <Route
+                path={path.SIGN_UP_PAGE}
+                component={userIsNotAuthenticated(SignUpPage)}
               />
               <Route
                 path={path.HOME_PAGE}

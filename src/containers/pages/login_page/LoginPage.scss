@@ -114,17 +114,27 @@ $user_icon_image: url("../../../image/login.jpg");
           );
         }
 
-        .forgot-password {
-          // ALign
-          margin: $unit-size;
-          text-align: right;
-          .forgot-password-button {
-            // Font
-            font-size: $unit-size;
+        .other-login-option {
+          display: flex;
 
-            text-decoration: none;
+          justify-content: space-between;
 
-            color: black;
+          .other-option-container {
+            margin: $unit-size;
+
+            .other-option-button {
+              font-size: $unit-size;
+
+              text-decoration: none;
+
+              color: black;
+            }
+
+            .other-option-button:hover {
+              font-size: calc($unit-size * 1.1);
+
+              color: $common-red;
+            }
           }
         }
       }
@@ -244,17 +254,27 @@ $user_icon_image: url("../../../image/login.jpg");
           );
         }
 
-        .forgot-password {
-          // ALign
-          margin: $unit-size;
-          text-align: right;
-          .forgot-password-button {
-            // Font
-            font-size: $unit-size;
+        .other-login-option {
+          display: flex;
 
-            text-decoration: none;
+          justify-content: space-between;
 
-            color: black;
+          .other-option-container {
+            margin: $unit-size;
+
+            .other-option-button {
+              font-size: $unit-size;
+
+              text-decoration: none;
+
+              color: black;
+            }
+
+            .other-option-button:hover {
+              font-size: calc($unit-size * 1.1);
+
+              color: $common-red;
+            }
           }
         }
       }
@@ -374,17 +394,28 @@ $user_icon_image: url("../../../image/login.jpg");
           );
         }
 
-        .forgot-password {
-          // ALign
-          margin: $unit-size;
-          text-align: right;
-          .forgot-password-button {
-            // Font
-            font-size: $unit-size;
+        .other-login-option {
+          display: flex;
 
-            text-decoration: none;
+          justify-content: space-between;
 
-            color: black;
+          .other-option-container {
+            margin: $unit-size;
+            padding: $unit-size;
+
+            .other-option-button {
+              font-size: $unit-size;
+
+              text-decoration: none;
+
+              color: black;
+            }
+
+            .other-option-button:hover {
+              font-size: calc($unit-size * 1.1);
+
+              color: $common-red;
+            }
           }
         }
       }

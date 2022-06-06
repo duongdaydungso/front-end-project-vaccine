@@ -7,6 +7,24 @@ export const handleLoginAPI = (userSSN, userPassword) => {
   });
 };
 
+export const handleSignUpAPI = (
+  userType,
+  name,
+  password,
+  SSN,
+  gender,
+  dateOfBirth
+) => {
+  return axios.post("/auth/register", {
+    userType: userType,
+    name: name,
+    password: password,
+    SSN: SSN,
+    gender: gender,
+    dateOfBirth: dateOfBirth,
+  });
+};
+
 export const getAllVaccinations = (accessToken) => {
   return axios.get("/vaccinations/all", {
     headers: {

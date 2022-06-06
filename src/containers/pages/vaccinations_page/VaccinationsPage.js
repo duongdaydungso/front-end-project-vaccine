@@ -57,34 +57,48 @@ function VaccinationsPage(props) {
         "You want to delete vaccination with ID: " + vaccinationID + " ?"
       )
     ) {
-      await deleteVaccination(accessToken, vaccinationID).catch((err) =>
-        console.log(err)
+      const res = await deleteVaccination(accessToken, vaccinationID).catch(
+        (err) => console.log(err)
       );
+
+      if (res.error === 0) {
+        alert("Deleted vaccination!");
+      } else {
+        alert("Delete failed!");
+      }
 
       fetchData();
     }
   };
 
   const handleUserAdd = async (vaccinationID) => {
-    await assignPatientToVaccination(
+    const res = await assignPatientToVaccination(
       accessToken,
       vaccinationID,
       props.userInfo.SSN
     ).catch((err) => console.log(err));
 
-    alert("Assigned vaccination!");
+    if (res.error === 0) {
+      alert("Assigned vaccination!");
+    } else {
+      alert("Assign failed!");
+    }
 
     fetchData();
   };
 
   const handleUserDelete = async (vaccinationID) => {
-    await unassignPatientToVaccination(
+    const res = await unassignPatientToVaccination(
       accessToken,
       vaccinationID,
       props.userInfo.SSN
     ).catch((err) => console.log(err));
 
-    alert("Unassigned vaccination!");
+    if (res.error === 0) {
+      alert("Unassigned vaccination!");
+    } else {
+      alert("Unassign failed!");
+    }
 
     fetchData();
   };

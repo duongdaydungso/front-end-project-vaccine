@@ -1,6 +1,7 @@
 export const path = {
   START_PAGE: "/",
   LOGIN_PAGE: "/login",
+  SIGN_UP_PAGE: "/signup",
   HOME_PAGE: "/home",
   VACCINESTATIONS_PAGE: "/vaccinestations",
   VACCINATIONS_PAGE: "/vaccinations",
