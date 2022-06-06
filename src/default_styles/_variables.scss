@@ -1,0 +1,20 @@
+$base-size: 16px;
+$fontmain: "Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$common-purple: #58384f;
+$common-orange: #fc993b;
+$common-lavender: #dbcbd8;
+$common-red: #db5461;
+$common-gray: #628395;
+
+$common-background-color: lighten($common-gray, 45%);
+$common-label-color: linear-gradient(
+  0deg,
+  lighten($common-orange, 5%) 0%,
+  lighten($common-red, 5%) 100%
+);
+$common-text-color: $common-purple;
+
+$common-shadow: 0px 30px 40px rgba(0, 0, 0, 0.5);

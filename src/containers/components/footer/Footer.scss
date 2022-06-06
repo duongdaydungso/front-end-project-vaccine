@@ -1,0 +1,59 @@
+@import "../../../default_styles/common.scss";
+
+$footer-background-color: linear-gradient(0deg, $common-purple, $common-red);
+$footer-content-color: $common-lavender;
+
+.footer-container {
+  width: 100%;
+  height: 300px;
+
+  .footer-content {
+    width: 100%;
+    height: 100%;
+
+    padding-left: 10%;
+    padding-right: 10%;
+
+    background: $footer-background-color;
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+
+      text-align: left;
+
+      padding-left: 20%;
+      padding-top: 60px;
+
+      .footer-column-title {
+        margin-bottom: 20px;
+
+        text-decoration: none;
+
+        color: $footer-content-color;
+
+        font-size: 18px;
+      }
+
+      .footer-child {
+        margin-top: 8px;
+
+        .footer-child-icon {
+          margin-right: 10px;
+          color: $footer-content-color;
+        }
+
+        .footer-child-link {
+          font-size: 15px;
+
+          text-decoration: none;
+
+          color: $footer-content-color;
+        }
+      }
+    }
+  }
+}

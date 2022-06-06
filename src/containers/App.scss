@@ -1,0 +1,13 @@
+@import "../default_styles/common.scss";
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $common-background-color;
+
+  .content-container {
+    min-height: calc(100% - 375px); // header (75px) + footer (300px)
+    background-color: $common-background-color;
+    padding-bottom: 150px;
+  }
+}

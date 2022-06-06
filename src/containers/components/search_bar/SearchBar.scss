@@ -1,0 +1,64 @@
+@import "../../../default_styles/common.scss";
+
+.search-container {
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  width: 350px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .search-title {
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+  }
+
+  .search-input-container {
+    position: relative;
+
+    .search-icon {
+      position: absolute;
+
+      top: 7px;
+      right: 8px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .search-input {
+      border: 1px solid $common-purple;
+      border-radius: 5px;
+
+      height: 30px;
+      width: 250px;
+
+      outline: 0;
+      background-color: lighten($common-lavender, 8%);
+    }
+  }
+
+  .search-input:hover,
+  .search-input:focus {
+    background-color: white;
+  }
+
+  .search-button {
+    height: 30px;
+    margin: auto;
+
+    background-color: $common-gray;
+
+    .button-icon {
+      margin: auto;
+    }
+  }
+
+  .search-button:hover,
+  .search-button:focus {
+    background-color: $common-red;
+  }
+}
