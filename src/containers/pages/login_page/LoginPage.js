@@ -9,8 +9,6 @@ import { handleLoginAPI } from "../../../services/userService";
 
 import * as actions from "../../../store/actions";
 
-import { push } from "connected-react-router";
-
 import UserIcon from "../../../image/user_icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
@@ -116,7 +114,9 @@ class LoginPage extends React.Component {
               Login
             </button>
             <div className="forgot-password">
-              <Link className="forgot-password-button" to="#">Forgot password</Link>
+              <Link className="forgot-password-button" to="#">
+                Forgot password
+              </Link>
             </div>
           </div>
         </div>
@@ -131,7 +131,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    navigate: (path) => dispatch(push(path)),
     userLoginSuccess: (userInfo) =>
       dispatch(actions.userLoginSuccess(userInfo)),
   };
