@@ -63,18 +63,33 @@
       }
     }
 
+    .add-staff-member-button {
+      width: 350px;
+      height: 40px;
+
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .add-staff-member-form {
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .patients-list {
       margin: auto;
       margin-top: 100px;
 
-      width: 1100px;
+      width: 1200px;
     }
 
     .staff-members-list {
       margin: auto;
       margin-top: 100px;
 
-      width: 1100px;
+      width: 1200px;
     }
   }
 }

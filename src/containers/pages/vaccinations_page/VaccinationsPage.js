@@ -8,7 +8,13 @@ import {
   unassignPatientToVaccination,
 } from "../../../services/userService";
 
-import { deleteVaccination } from "../../../services/adminService";
+import {
+  deleteVaccination,
+  addNewVaccination,
+} from "../../../services/adminService";
+
+import CommonButton from "../../components/button/CommonButton";
+import CommonForm from "../../components/form/CommonForm";
 
 import VaccinationsList from "../../components/list/VaccinationsList";
 import Vaccination from "../../components/vaccination/Vaccination";
@@ -20,6 +26,7 @@ function VaccinationsPage(props) {
   const [arrPast, setArrPast] = useState([]);
   const [arrAssigned, setArrAssigned] = useState([]);
   const [arrNotAssigned, setArrNotAssigned] = useState([]);
+  const [isShowAdd, setIsShowAdd] = useState(false);
 
   const accessToken = props.userInfo.accessToken;
 
@@ -64,7 +71,7 @@ function VaccinationsPage(props) {
       if (res.error === 0) {
         alert("Deleted vaccination!");
       } else {
-        alert("Delete failed!");
+        alert(res.error_type);
       }
 
       fetchData();
@@ -81,7 +88,7 @@ function VaccinationsPage(props) {
     if (res.error === 0) {
       alert("Assigned vaccination!");
     } else {
-      alert("Assign failed!");
+      alert(res.error_type);
     }
 
     fetchData();
@@ -97,10 +104,37 @@ function VaccinationsPage(props) {
     if (res.error === 0) {
       alert("Unassigned vaccination!");
     } else {
-      alert("Unassign failed!");
+      alert(res.error_type);
     }
 
     fetchData();
+  };
+
+  const handleAddButton = () => {
+    setIsShowAdd(!isShowAdd);
+  };
+
+  const handleAddForm = async (
+    vaccinestationID,
+    limitNumber,
+    date,
+    vaccineType
+  ) => {
+    const res = await addNewVaccination(
+      props.userInfo.accessToken,
+      vaccinestationID,
+      limitNumber,
+      date,
+      vaccineType
+    ).catch((err) => console.log(err));
+
+    if (res && res.error === 0) {
+      alert("Add new vaccination successfully!");
+
+      fetchData();
+    } else {
+      alert(res.error_type);
+    }
   };
 
   return (
@@ -112,6 +146,23 @@ function VaccinationsPage(props) {
           </Route>
           <Route path="/vaccinations">
             <div className="vaccinations-page-background">
+              {props.userInfo.userType === "admin" && (
+                <div className="add-vaccination-button">
+                  <CommonButton
+                    onClick={handleAddButton}
+                    text="Add new vaccination"
+                  />
+                </div>
+              )}
+              {isShowAdd && (
+                <div className="add-vaccination-form">
+                  <CommonForm
+                    formType="addVaccination"
+                    formTitle="Add new vaccination"
+                    submitMethod={handleAddForm}
+                  />
+                </div>
+              )}
               <div className="vaccinations-list">
                 <div className="vaccinations-list-child">
                   <VaccinationsList

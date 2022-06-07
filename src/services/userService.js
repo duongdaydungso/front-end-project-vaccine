@@ -80,3 +80,15 @@ export const getProfileData = (accessToken, SSN, userType) => {
     },
   });
 };
+
+export const getAllVaccinestationsData = () => {
+  return axios.get("/vaccinestations/all");
+};
+
+export const getVaccinestationByID = (vaccinestationID) => {
+  return axios.get(`/vaccinestations/${vaccinestationID}`);
+};
+
+export const getAllSymptomsData = () => {
+  return axios.get("/symptoms/all");
+};

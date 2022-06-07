@@ -3,14 +3,29 @@
 .vaccinations-page-background {
   background-color: $common-background-color;
 
-  .vaccinations-list {
-    margin: auto;
-    margin-top: 70px;
+  .add-vaccination-button {
+    width: 200px;
+    height: 40px;
 
-    width: 1100px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .vaccinations-list-child {
-      margin-top: 150px;
-    }
+  .add-vaccination-form {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.vaccinations-list {
+  margin: auto;
+  margin-top: 70px;
+
+  width: 1100px;
+
+  .vaccinations-list-child {
+    margin-top: 150px;
   }
 }

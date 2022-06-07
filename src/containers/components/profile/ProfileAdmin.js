@@ -49,10 +49,10 @@ function ProfileAdmin(props) {
       {patientData[0] && staffMemberData[0] && (
         <div className="admin-data">
           <div className="data-list">
-            <PatientsList list={patientData} />
+            <StaffMemberList list={staffMemberData} />
           </div>
           <div className="data-list">
-            <StaffMemberList list={staffMemberData} />
+            <PatientsList list={patientData} />
           </div>
         </div>
       )}

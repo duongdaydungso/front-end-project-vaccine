@@ -77,6 +77,8 @@ class SignUpPage extends React.Component {
 
     if (errCode === 0) {
       alert("Sign up success!");
+    } else {
+      alert(res.error_type);
     }
   };
 

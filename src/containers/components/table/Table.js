@@ -34,7 +34,9 @@ function Table(props) {
                       ? row.values.vaccinationID
                       : props.tableType === "patientTable"
                       ? row.values.patientSocialSecurityNumber
-                      : row.values.staffMemberSocialSecurityNumber
+                      : props.tableType === "staffmemberTable"
+                      ? row.values.staffMemberSocialSecurityNumber
+                      : row.values.vaccineStationId
                   )}
                 >
                   <FontAwesomeIcon
@@ -53,7 +55,9 @@ function Table(props) {
                         ? row.values.vaccinationID
                         : props.tableType === "patientTable"
                         ? row.values.patientSocialSecurityNumber
-                        : row.values.staffMemberSocialSecurityNumber
+                        : props.tableType === "staffmemberTable"
+                        ? row.values.staffMemberSocialSecurityNumber
+                        : row.values.vaccineStationId
                     )
                   }
                 />
@@ -68,7 +72,9 @@ function Table(props) {
                         ? row.values.vaccinationID
                         : props.tableType === "patientTable"
                         ? row.values.patientSocialSecurityNumber
-                        : row.values.staffMemberSocialSecurityNumber
+                        : props.tableType === "staffmemberTable"
+                        ? row.values.staffMemberSocialSecurityNumber
+                        : row.values.vaccineStationId
                     )
                   }
                 />

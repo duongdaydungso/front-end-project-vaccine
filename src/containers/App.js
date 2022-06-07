@@ -18,6 +18,9 @@ import StartPage from "./pages/start_page/StartPage";
 import HomePage from "./pages/home_page/HomePage";
 import ProfilePage from "./pages/profile_page/ProfilePage";
 import VaccinationsPage from "./pages/vaccinations_page/VaccinationsPage";
+import VaccinestationsPage from "./pages/vaccinestations_page/VaccinestationsPage";
+import DiagnosisPage from "./pages/diagnosis_page/DiagnosisPage";
+import SymptomsPage from "./pages/symptoms_page/SymptomsPage";
 
 import "./App.scss";
 
@@ -67,8 +70,20 @@ class App extends React.Component {
                 component={userIsAuthenticated(VaccinationsPage)}
               />
               <Route
+                path={path.VACCINESTATIONS_PAGE}
+                component={userIsAuthenticated(VaccinestationsPage)}
+              />
+              <Route
                 path={path.PROFILE_PAGE}
                 component={userIsAuthenticated(ProfilePage)}
+              />
+              <Route
+                path={path.DIAGNOSIS_PAGE}
+                component={userIsAuthenticated(DiagnosisPage)}
+              />
+              <Route
+                path={path.SYMPTOMS_PAGE}
+                component={userIsAuthenticated(SymptomsPage)}
               />
             </Switch>
           </div>

@@ -42,12 +42,15 @@ function StaffMemberList(props) {
       tableData={tableData}
       tableType="staffmemberTable"
       isView={handleView}
+      isDelete={props.isDelete}
     />
   );
 }
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    userInfo: state.user.userInfo,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
