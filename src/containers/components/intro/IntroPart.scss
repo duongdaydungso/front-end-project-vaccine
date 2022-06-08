@@ -1,0 +1,57 @@
+@import "../../../default_styles/common.scss";
+
+.intro-part-container {
+  height: 100%;
+  width: 100%;
+
+  .intro-part-align {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+    .intro-part-text-container {
+      height: 100%;
+      width: 40%;
+
+      padding: 0 7%;
+
+      .intro-part-title {
+        height: 50px;
+
+        text-align: center;
+
+        font-weight: bold;
+
+        font-size: 35px;
+
+        color: $common-purple;
+      }
+
+      .intro-part-info {
+        height: 200px;
+
+        margin: 25px 0;
+
+        font-size: 20px;
+
+        color: $common-purple;
+      }
+
+      .intro-part-button-container {
+        height: 100px;
+
+        padding: 30px 0;
+
+        .intro-part-button {
+          margin: auto;
+          width: 70%;
+        }
+      }
+    }
+
+    .intro-part-image {
+      height: 100%;
+      width: 60%;
+    }
+  }
+}

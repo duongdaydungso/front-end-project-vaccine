@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { path } from "../../../utils/constants";
+import Intro from "../../components/intro/Intro";
 
 class StartPage extends Component {
   render() {
-    const { isLoggedIn } = this.props;
-
-    let linkToRedirect = isLoggedIn ? path.HOME_PAGE : path.LOGIN_PAGE;
-
-    return <Redirect to={linkToRedirect} />;
+    return <Intro />;
   }
 }
 

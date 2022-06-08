@@ -21,6 +21,7 @@ import VaccinationsPage from "./pages/vaccinations_page/VaccinationsPage";
 import VaccinestationsPage from "./pages/vaccinestations_page/VaccinestationsPage";
 import DiagnosisPage from "./pages/diagnosis_page/DiagnosisPage";
 import SymptomsPage from "./pages/symptoms_page/SymptomsPage";
+import HelpPage from "./pages/help_page/HelpPage";
 
 import "./App.scss";
 
@@ -84,6 +85,10 @@ class App extends React.Component {
               <Route
                 path={path.SYMPTOMS_PAGE}
                 component={userIsAuthenticated(SymptomsPage)}
+              />
+              <Route
+                path={path.HELP_PAGE}
+                component={userIsAuthenticated(HelpPage)}
               />
             </Switch>
           </div>

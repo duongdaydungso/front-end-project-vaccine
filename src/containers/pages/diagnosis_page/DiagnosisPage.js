@@ -32,6 +32,9 @@ function DiagnosisPage(props) {
 
   return (
     <div className="diagnosis-page">
+      {props.userInfo.userType === "admin" && (
+        <div className="command-for-admin">Not available for admin</div>
+      )}
       {diagnosisData[0] && props.userInfo.userType === "user" && (
         <div className="diagnosis-list">
           <DiagnosisList list={diagnosisData} />

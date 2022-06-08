@@ -1,0 +1,65 @@
+@import "../../../default_styles/common.scss";
+
+.intro-container {
+  width: 100%;
+  height: 3000px;
+
+  .intro-start-container {
+    height: 600px;
+
+    width: 100%;
+    display: flex;
+
+    box-shadow: 0px 20px 20px $common-gray;
+
+    .intro-start-text-container {
+      background: linear-gradient(90deg, $common-red, #8cceea);
+
+      height: 100%;
+      width: 40%;
+
+      padding: 0 7%;
+
+      .intro-start-title {
+        padding-top: 100px;
+        margin-bottom: 50px;
+
+        font-weight: bold;
+
+        font-size: 35px;
+
+        color: $common-purple;
+      }
+
+      .intro-start-info {
+        font-size: 20px;
+
+        margin-bottom: 100px;
+
+        color: $common-purple;
+      }
+
+      .intro-start-button-container {
+        height: 100px;
+
+        .intro-start-button {
+          margin: auto;
+          width: 60%;
+        }
+      }
+    }
+
+    .intro-start-image {
+      height: 100%;
+      width: 60%;
+    }
+  }
+  .intro-container-child {
+    margin: auto;
+
+    margin-top: 200px;
+
+    width: 80%;
+    height: 400px;
+  }
+}
